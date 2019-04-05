@@ -2,7 +2,7 @@ description = "Spring TestContext Framework"
 
 dependencyManagement {
 	imports {
-		mavenBom "org.junit:junit-bom:${junit5Version}"
+		mavenBom "org.junit:junit-bom:5.3.2"
 		mavenBom "io.projectreactor:reactor-bom:${reactorVersion}"
 		mavenBom "io.netty:netty-bom:${nettyVersion}"
 	}
@@ -75,7 +75,7 @@ dependencies {
 	testCompile("org.apache.httpcomponents:httpclient:4.5.7") {
 		exclude group: "commons-logging", module: "commons-logging"
 	}
-	testCompile("io.projectreactor.netty:reactor-netty")
+	testCompile("io.projectreactor.netty:reactor-netty:0.8.4.RELEASE")
 	testCompile("de.bechte.junit:junit-hierarchicalcontextrunner:4.12.1")
 	// Pull in the latest JUnit 5 Launcher API and the Vintage engine as well
 	// so that we can run JUnit 4 tests in IntelliJ IDEA.
@@ -99,10 +99,10 @@ task testNG(type: Test) {
 
 task testJUnitJupiter(type: Test) {
 	description = "Runs JUnit Jupiter tests."
-	useJUnitPlatform {
-		includeEngines "junit-jupiter"
-		excludeTags "failing-test-case"
-	}
+//	useJUnitPlatform {
+//		includeEngines "junit-jupiter"
+//		excludeTags "failing-test-case"
+//	}
 	filter {
 		includeTestsMatching "org.springframework.test.context.junit.jupiter.*"
 	}

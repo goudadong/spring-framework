@@ -37,7 +37,7 @@ import org.springframework.lang.Nullable;
  * integrated with {@link DefaultSingletonBeanRegistry}'s singleton management.
  *
  * <p>Serves as base class for {@link AbstractBeanFactory}.
- *
+ * 在 DefaultSingletonBeanRegistry 基础上增加了对 FactoryBean的特殊处理功能
  * @author Juergen Hoeller
  * @since 2.5.1
  */

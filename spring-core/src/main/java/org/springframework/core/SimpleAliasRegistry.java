@@ -34,7 +34,7 @@ import org.springframework.util.StringValueResolver;
  * Serves as base class for
  * {@link org.springframework.beans.factory.support.BeanDefinitionRegistry}
  * implementations.
- *
+ * 使用ConcurrentHashMap作为缓存实现AliasRegistry
  * @author Juergen Hoeller
  * @since 2.5.2
  */

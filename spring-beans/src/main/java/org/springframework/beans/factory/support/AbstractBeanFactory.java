@@ -98,7 +98,7 @@ import org.springframework.util.StringValueResolver;
  * for a given bean name and creating a bean instance for a given bean definition,
  * respectively. Default implementations of those operations can be found in
  * {@link DefaultListableBeanFactory} and {@link AbstractAutowireCapableBeanFactory}.
- *
+ * 综合 FactoryBeanRegistrySupport 和 ConfigurableBeanFactory 的功能 。
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @author Costin Leau
